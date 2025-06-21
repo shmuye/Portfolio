@@ -1,7 +1,7 @@
 
 const Project = ({ title, description, image, githubURL }) => {
     return (
-        <div className='w-full h-auto flex flex-col items-center  rounded-[8px] shadow-lg border overflow-hidden sm:w-[30%] '>
+        <div className='w-full h-auto flex flex-col items-center  rounded-2xl shadow-lg hover:shadow-blue-300 overflow-hidden sm:w-[30%] '>
             <img
                 src={image}
                 alt="vegetable"
@@ -14,7 +14,7 @@ const Project = ({ title, description, image, githubURL }) => {
                         {description}
                     </p>
                 </div>
-                <a href={githubURL} className=' mx-4 mb-2 px-4 py-2 bg-blue-600 text-white cursor-pointer rounded transition'>Source Code</a>
+                <a href={githubURL} className=' mx-4 mb-2 px-4 py-2 bg-blue-600 hover:bg-blue-400 text-white cursor-pointer rounded transition'>Source Code</a>
 
             </div>
         </div>
