@@ -2,7 +2,7 @@ import Project from "./components/Project";
 import Image from "./assets/web.jpg"
 import Contact from "./components/Contact";
 import Service from "./components/Service";
-import Footer from "./components/footer";
+import Footer from "./components/Footer"
 import Home from "./components/Home";
 import About from "./components/About";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
