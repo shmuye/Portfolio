@@ -1,71 +1,120 @@
-import Project from "./components/Project";
-import weatherAppImage from "./assets/weather.jpg";
-import TodoImage from "./assets/todo.jpg";
-import ResearchImage from "./assets/research.jpg";
-import Contact from "./components/Contact";
-import Service from "./components/Service";
-import Footer from "./components/Footer"
-import Home from "./components/Home";
-import About from "./components/About";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { faFigma } from "@fortawesome/free-brands-svg-icons";
+"use client"
+
+import { useState, useEffect } from "react"
+import Project from "./components/Project"
+import weatherAppImage from "./assets/weather.jpg"
+import TodoImage from "./assets/todo.jpg"
+import ResearchImage from "./assets/research.jpg"
+import Contact from "./components/Contact"
+import Service from "./components/Service"
+import Footer from "./components/footer"
+import Home from "./components/Home"
+import About from "./components/About"
+import Loading from "./components/Loading"
+import { faPhone, faCode } from "@fortawesome/free-solid-svg-icons"
+import { faFigma } from "@fortawesome/free-brands-svg-icons"
 
 const App = () => {
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        // Simulate loading time
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 3000) // 3 seconds loading time
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if (isLoading) {
+        return <Loading />
+    }
+
     return (
-        <div className="mx-auto  
-        w-full  min-h-screen flex flex-col gap-8">
-            <Home />
-            <h1 id="About" className="text-2xl text-center font-bold">About Me</h1>
-            <About />
-            <h1 id="Services" className="text-2xl font-bold text-center ">Services</h1>
-            <div className="mx-4 flex flex-col justify-between items-center gap-8 sm:flex-row flex-wrap  ">
-                <Service
-                    title="Full Stack development"
-                    description="I build end-to-end web solutions — from sleek frontends to robust backends — using modern technologies like React, Node.js, Express, and MongoDB. I focus on clean code, performance, and user experience to deliver responsive, scalable, and production-ready applications."
-                    Icon={faCode}
+        <div className="w-full min-h-screen flex flex-col bg-gray-50 animate-fade-in">
+            <section id="Home">
+                <Home />
+            </section>
 
-                />
+            <section id="About" className="py-16 md:py-20">
+                <div className="container mx-auto">
+                    <h1 className="text-3xl md:text-4xl text-center font-bold mb-12 text-gray-800 animate-fade-in-up">
+                        About Me
+                    </h1>
+                    <About />
+                </div>
+            </section>
 
-                <Service
-                    title="Mobile App Development"
-                    description="I build high-performance, visually appealing mobile applications using Flutter for iOS and Jetpack Compose for Android. By combining the strengths of these modern UI frameworks, I deliver native-quality apps with consistent functionality and design across both platforms."
-                    Icon={faPhone}
+            <section id="Services" className="py-16 md:py-20 bg-white">
+                <div className="container mx-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in-up">
+                        Services
+                    </h1>
+                    <div className="px-4 md:px-8 lg:px-16 flex flex-col justify-between items-stretch gap-8 md:flex-row md:flex-wrap">
+                        <Service
+                            title="Full Stack Development"
+                            description="I build end-to-end web solutions — from sleek frontends to robust backends — using modern technologies like React, Node.js, Express, and MongoDB. I focus on clean code, performance, and user experience to deliver responsive, scalable, and production-ready applications."
+                            Icon={faCode}
+                            index={0}
+                        />
+                        <Service
+                            title="Mobile App Development"
+                            description="I build high-performance, visually appealing mobile applications using Flutter for iOS and Jetpack Compose for Android. By combining the strengths of these modern UI frameworks, I deliver native-quality apps with consistent functionality and design across both platforms."
+                            Icon={faPhone}
+                            index={1}
+                        />
+                        <Service
+                            title="UI/UX Design"
+                            description="I design clean, intuitive, and user-centered interfaces that elevate the user experience. From wireframes to final visuals, I focus on usability, accessibility, and aesthetics to ensure your product is both functional and visually engaging."
+                            Icon={faFigma}
+                            index={2}
+                        />
+                    </div>
+                </div>
+            </section>
 
-                />
+            <section id="Projects" className="py-16 md:py-20">
+                <div className="container mx-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in-up">
+                        Projects
+                    </h1>
+                    <div className="px-4 md:px-8 lg:px-16 flex flex-col justify-between items-stretch gap-8 md:flex-row md:flex-wrap">
+                        <Project
+                            title="Research Collaboration App"
+                            description="A mobile app that helps researchers to conduct their research smoothly. The app is built with Jetpack Compose for the UI and Nest with PostgreSQL for the backend. I contributed to the backend of the app."
+                            image={ResearchImage}
+                            githubURL="https://github.com/shmuye/Research-collaboration-app"
+                            index={0}
+                        />
+                        <Project
+                            title="Weather App"
+                            description="React Weather App which delivers current weather conditions, forecasts, and detailed meteorological data in a clean, user-friendly interface. Built with modern web technologies, it offers fast performance and an intuitive user experience for checking weather information on the go."
+                            image={weatherAppImage}
+                            githubURL="https://github.com/shmuye/React-weather-app"
+                            index={1}
+                        />
+                        <Project
+                            title="Todo App"
+                            description="A modern React todo application with priorities, categories, and smart filtering. Features include task management, due dates, and a clean, intuitive interface for productivity."
+                            image={TodoImage}
+                            githubURL="https://github.com/shmuye/Todo"
+                            index={2}
+                        />
+                    </div>
+                </div>
+            </section>
 
-                <Service
-                    title="UI/UX Design"
-                    description="I design clean, intuitive, and user-centered interfaces that elevate the user experience. From wireframes to final visuals, I focus on usability, accessibility, and aesthetics to ensure your product is both functional and visually engaging."
-                    Icon={faFigma}
-                />
-            </div>
-            <h1 id="Projects" className="text-2xl font-bold  text-center">Projects</h1>
-            <div className="mx-4 flex flex-col justify-between items-center gap-8 sm:flex-row flex-wrap  ">
-                <Project
-                    title="Reasearch collaboration app"
-                    description="A mobile app that helps reasearchers to conduct their research smoothly. the app is built jetpack compose for the UI and Nest with PostgreSql for the backend. I contributed the backend of the app."
-                    image={ResearchImage}
-                    githubURL="https://github.com/shmuye/Research-collaboration-app"
-                />
-                <Project
-                    title="weather App"
-                    description="React Weather App which delivers current weather conditions, forecasts, and detailed meteorological data in a clean, user-friendly interface. Built with modern web technologies, it offers fast performance and an intuitive user experience for checking weather information on the go."
-                    image={weatherAppImage}
-                    githubURL="https://github.com/shmuye/React-weather-app"
-                />
-                <Project
-                    title="Todo App"
-                    description="A modern React todo application with priorities, categories, and smart filtering."
-                    image={TodoImage}
-                    githubURL="https://github.com/shmuye/Todo"
-                />
-            </div>
-            <h1 id="Contact" className="text-2xl font-bold text-center">Have a project? Let's Get in touch.</h1>
-            <Contact />
+            <section id="Contact" className="py-16 md:py-20 bg-white">
+                <div className="container mx-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in-up">
+                        Have a project? Let's Get in touch.
+                    </h1>
+                    <Contact />
+                </div>
+            </section>
+
             <Footer />
         </div>
-
     )
 }
 
