@@ -1,7 +1,5 @@
-"use client"
-
-import hamburger from "../assets/menu.png"
-import close from "../assets/close.png"
+import hamburger from "/assets/menu.png"
+import close from "/assets/close.png"
 import { useState } from "react"
 
 const NavLinks = [

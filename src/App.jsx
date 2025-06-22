@@ -1,10 +1,8 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import Project from "./components/Project"
-import weatherAppImage from "./assets/weather.jpg"
-import TodoImage from "./assets/todo.jpg"
-import ResearchImage from "./assets/research.jpg"
+import weatherAppImage from "/assets/weather.jpg"
+import TodoImage from "/assets/todo.jpg"
+import ResearchImage from "/assets/research.jpg"
 import Contact from "./components/Contact"
 import Service from "./components/Service"
 import Footer from "./components/footer"

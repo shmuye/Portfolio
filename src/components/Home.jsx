@@ -1,5 +1,5 @@
 import Header from "./Header"
-import background from "../assets/background.jpg"
+import background from "/assets/background.jpg"
 
 const Home = () => {
     return (
