@@ -1,5 +1,7 @@
 import Project from "./components/Project";
-import Image from "./assets/web.jpg"
+import weatherAppImage from "./assets/weather.jpg";
+import TodoImage from "./assets/todo.jpg";
+import ResearchImage from "./assets/research.jpg";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
 import Footer from "./components/Footer"
@@ -19,42 +21,44 @@ const App = () => {
             <h1 id="Services" className="text-2xl font-bold text-center ">Services</h1>
             <div className="mx-4 flex flex-col justify-between items-center gap-8 sm:flex-row flex-wrap  ">
                 <Service
-                    title="Mobile App Development"
-                    description="I build high-performance, visually appealing mobile applications using Flutter for iOS and Jetpack Compose for Android. By combining the strengths of these modern UI frameworks, I deliver native-quality apps with consistent functionality and design across both platforms."
-                    Icon={faPhone}
-
-                />
-                <Service
                     title="Full Stack development"
                     description="I build end-to-end web solutions — from sleek frontends to robust backends — using modern technologies like React, Node.js, Express, and MongoDB. I focus on clean code, performance, and user experience to deliver responsive, scalable, and production-ready applications."
                     Icon={faCode}
 
                 />
+
+                <Service
+                    title="Mobile App Development"
+                    description="I build high-performance, visually appealing mobile applications using Flutter for iOS and Jetpack Compose for Android. By combining the strengths of these modern UI frameworks, I deliver native-quality apps with consistent functionality and design across both platforms."
+                    Icon={faPhone}
+
+                />
+
                 <Service
                     title="UI/UX Design"
                     description="I design clean, intuitive, and user-centered interfaces that elevate the user experience. From wireframes to final visuals, I focus on usability, accessibility, and aesthetics to ensure your product is both functional and visually engaging."
                     Icon={faFigma}
                 />
             </div>
-            <h1 id="Projects" className="text-2xl font-bold  text-center">My Projects</h1>
+            <h1 id="Projects" className="text-2xl font-bold  text-center">Projects</h1>
             <div className="mx-4 flex flex-col justify-between items-center gap-8 sm:flex-row flex-wrap  ">
                 <Project
                     title="Reasearch collaboration app"
                     description="A mobile app that helps reasearchers to conduct their research smoothly. the app is built jetpack compose for the UI and Nest with PostgreSql for the backend. I contributed the backend of the app."
-                    image={Image}
+                    image={ResearchImage}
                     githubURL="https://github.com/shmuye/Research-collaboration-app"
                 />
                 <Project
-                    title="Reasearch collaboration app"
-                    description="A mobile app that helps reasearchers to conduct their research smoothly. the app is built jetpack compose for the UI and Nest with PostgreSql for the backend. I contributed the backend of the app."
-                    image={Image}
-                    githubURL="https://github.com/shmuye/Research-collaboration-app"
+                    title="weather App"
+                    description="React Weather App which delivers current weather conditions, forecasts, and detailed meteorological data in a clean, user-friendly interface. Built with modern web technologies, it offers fast performance and an intuitive user experience for checking weather information on the go."
+                    image={weatherAppImage}
+                    githubURL="https://github.com/shmuye/React-weather-app"
                 />
                 <Project
-                    title="Reasearch collaboration app"
-                    description="A mobile app that helps reasearchers to conduct their research smoothly. the app is built jetpack compose for the UI and Nest with PostgreSql for the backend. I contributed the backend of the app."
-                    image={Image}
-                    githubURL="https://github.com/shmuye/Research-collaboration-app"
+                    title="Todo App"
+                    description="A modern React todo application with priorities, categories, and smart filtering."
+                    image={TodoImage}
+                    githubURL="https://github.com/shmuye/Todo"
                 />
             </div>
             <h1 id="Contact" className="text-2xl font-bold text-center">Have a project? Let's Get in touch.</h1>
