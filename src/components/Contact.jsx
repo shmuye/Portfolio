@@ -25,6 +25,7 @@ const Contact = () => {
                         id="email"
                         type="email"
                         placeholder="Enter your email"
+                        required
                     />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -36,6 +37,7 @@ const Contact = () => {
                         name="message"
                         id="message"
                         placeholder="Enter your message"
+                        required
                     />
                 </div>
                 <button
