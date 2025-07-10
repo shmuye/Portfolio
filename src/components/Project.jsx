@@ -1,4 +1,4 @@
-const Project = ({ title, description, image, githubURL, index = 0 }) => {
+const Project = ({ title, description, image, githubURL, siteURL, index = 0 }) => {
     return (
         <div
             className="w-full flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-200 overflow-hidden transition-all duration-500 md:w-[48%] lg:w-[30%] hover:scale-105 hover:-translate-y-3 animate-fade-in-up group"
@@ -20,14 +20,27 @@ const Project = ({ title, description, image, githubURL, index = 0 }) => {
                         {description}
                     </p>
                 </div>
-                <a
-                    href={githubURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg transform"
-                >
-                    Source Code
-                </a>
+                <div className="flex gap-3">
+                    {siteURL && (
+                        <a
+                            href={siteURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 text-center py-2 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg transform"
+                        >
+                            View Site
+                        </a>
+                    )}
+                    <a
+                        href={githubURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg transform ${siteURL ? "flex-1" : "w-full"
+                            }`}
+                    >
+                        Source Code
+                    </a>
+                </div>
             </div>
         </div>
     )

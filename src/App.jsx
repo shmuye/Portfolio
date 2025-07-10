@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Project from "./components/Project"
-import youtubeClone from '/assets/youtube-clone.png'
+import youtubeClone from "/assets/youtube-clone.png"
 import TodoImage from "/assets/todo.jpg"
 import ResearchImage from "/assets/research.jpg"
 import Contact from "./components/Contact"
@@ -89,6 +89,7 @@ const App = () => {
                             description="A Youtube clone website build with React and Material UI which replicates the basic functionalities of Youtube."
                             image={youtubeClone}
                             githubURL="https://github.com/shmuye/youtube-clone"
+                            siteURL="https://ephemeral-souffle-97474d.netlify.app/"
                             index={1}
                         />
                         <Project
