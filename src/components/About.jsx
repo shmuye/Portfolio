@@ -12,7 +12,7 @@ const About = () => {
                     sharpened my problem-solving mindset and fueled my drive to create impactful digital solutions.
                 </p>
                 <a
-                    href="https://drive.google.com/file/d/15YGkSwaeTbrGmG2jmlUCEOOKIUE0q2Al/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1A1Q1Xvj07kxzOOJz5haTxesIsaKKf4UZ/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block no-underline hover:no-underline py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg transform"
