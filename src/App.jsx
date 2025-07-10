@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Project from "./components/Project"
-import weatherAppImage from "/assets/weather.jpg"
+import youtubeClone from '/assets/youtube-clone.png'
 import TodoImage from "/assets/todo.jpg"
 import ResearchImage from "/assets/research.jpg"
 import Contact from "./components/Contact"
@@ -85,10 +85,10 @@ const App = () => {
                             index={0}
                         />
                         <Project
-                            title="Weather App"
-                            description="React Weather App which delivers current weather conditions, forecasts, and detailed meteorological data in a clean, user-friendly interface. Built with modern web technologies, it offers fast performance and an intuitive user experience for checking weather information on the go."
-                            image={weatherAppImage}
-                            githubURL="https://github.com/shmuye/React-weather-app"
+                            title="Youtube clone"
+                            description="A Youtube clone website build with React and Material UI which replicates the basic functionalities of Youtube."
+                            image={youtubeClone}
+                            githubURL="https://github.com/shmuye/youtube-clone"
                             index={1}
                         />
                         <Project
