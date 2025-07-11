@@ -17,7 +17,7 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="inline-block no-underline hover:no-underline py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg transform"
                 >
-                    Download CV
+                    Resume
                 </a>
             </div>
             <div className="w-full md:w-[40%] lg:w-[45%] flex justify-center animate-slide-in-right">
