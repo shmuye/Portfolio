@@ -89,7 +89,7 @@ const App = () => {
                             description="A Youtube clone website build with React and Material UI which replicates the basic functionalities of Youtube."
                             image={youtubeClone}
                             githubURL="https://github.com/shmuye/youtube-clone"
-                            siteURL="https://ephemeral-souffle-97474d.netlify.app/"
+                            siteURL="https://utubelike.netlify.app/"
                             index={1}
                         />
                         <Project
