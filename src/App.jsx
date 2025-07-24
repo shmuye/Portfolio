@@ -51,19 +51,19 @@ const App = () => {
                     <div className="px-4 md:px-8 lg:px-16 flex flex-col justify-between items-stretch gap-8 md:flex-row md:flex-wrap">
                         <Service
                             title="Full Stack Development"
-                            description="I build end-to-end web solutions — from sleek frontends to robust backends — using modern technologies like React, Node.js, Express, and MongoDB. I focus on clean code, performance, and user experience to deliver responsive, scalable, and production-ready applications."
+                            description="I build end-to-end web solutions — from sleek frontends to robust backends — using modern technologies like React, Node.js, Express, and MongoDB. I focus on clean code, performance, and user experience to deliver responsive, SEO optimized,  scalable, and production-ready applications."
                             Icon={faCode}
                             index={0}
                         />
                         <Service
                             title="Mobile App Development"
-                            description="I build high-performance, visually appealing mobile applications using Flutter for iOS and Jetpack Compose for Android. By combining the strengths of these modern UI frameworks, I deliver native-quality apps with consistent functionality and design across both platforms."
+                            description="I develope high performance, visually appealing mobile applications using modern UI frameworks - Flutter and Jetpack Compose for Android."
                             Icon={faPhone}
                             index={1}
                         />
                         <Service
                             title="UI/UX Design"
-                            description="I design clean, intuitive, and user-centered interfaces that elevate the user experience. From wireframes to final visuals, I focus on usability, accessibility, and aesthetics to ensure your product is both functional and visually engaging."
+                            description="I design clean, intuitive, and user-centered interfaces that elevate the user experience.I focus on usability, accessibility, and aesthetics to ensure your product is both functional and visually engaging."
                             Icon={faFigma}
                             index={2}
                         />
